@@ -1,0 +1,191 @@
+<html>
+   <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <title>hotmusic</title>
+<style>
+    html { 
+       background: linear-gradient(to top, #ffffff, #FFEBEE);
+    }
+    body {
+        margin: 0;
+    }
+
+    .topNav {
+        background-color: #;
+        padding: 5px 10px;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        box-shadow:0 1px 5px rgba(0,0,0,0.15);
+    }
+    .topNav ul {
+        display: flex;
+        list-style: none;
+    }
+    .topNav ul li {
+        padding: 5px 10px;
+    }
+    .bottomNav {
+        background-color: #48A2E2;
+        padding: 20px;
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        z-index: 10;
+    }
+
+    @keyframes jumping_ball {
+        0% {
+            top: 0;
+            left: 0;
+            background: #48A2E2;
+            animation-timing-function: ease-in;
+        }
+        30 % {
+            top: -20px;
+            left: -20px;
+            background: #48A2E2;
+        }
+        40 % {
+            top: -50px;
+            left: 0;
+            background: #48A2E2;
+        }
+        50 % {
+            top: -50px;
+            left: 20px;
+            background: #48A2E2;
+        }
+        80 % {
+            top: 0px;
+            left: -20px;
+            background: #48A2E2;
+        }
+        100 % {
+            top: 0px;
+            left: 0px;
+            background: #48A2E2;
+        }
+    }
+    .ball1{
+        top: 0px;
+        left: 0px;
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        animation: jumping_ball 10s infinite;
+        border: none;
+    }
+    .ball2{
+        top: 0px;
+        left: 0px;
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        animation: jumping_ball 8s infinite;
+        border: none;
+    }
+    .ball3{
+        top: 0px;
+        left: 0px;
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        animation: jumping_ball 6s infinite;
+        border: none;
+    }
+    .ball4{
+        top: 0px;
+        left: 0px;
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        animation: jumping_ball 4s infinite;
+        border: none;
+    }
+    .ball5{
+        top: 0px;
+        left: 0px;
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        animation: jumping_ball 2s infinite;
+        border: none;
+    }
+  
+  @font-face {
+    font-family: 'ifont';
+    src: url('ifont.ttf') format('truetype');
+       }
+    .text{
+    font-family: 'ifont', sans-serif;
+    }
+  
+  @font-face {
+    font-family: 't';
+    src: url('t.ttf') format('truetype');
+       }
+    .text1{
+    font-family: 't', sans-serif;
+    }
+</style>
+</head>
+<body>
+
+<div class="topNav">
+    <ul>
+        <li class="text1" style="color:;border:1px solid;border-radius:5px;width:28px;height:19px;font-size:14px;transform:translate(-10px,0px);">登录</li>
+        <li class="text1" style="border:1px solid;border-radius:5px;width:28px;height:19px;font-size:14px;color:#1e9fff">注册</li>
+    </ul>
+</div>
+<script>
+function ts(){
+  document.getElementById("ts").innerHTML = `
+
+<div id="popu" style="position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); z-index: 999;">
+
+    <div class="text1" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -65%);width: 70vw; margin-left:calc(50% - 50vw);margin-right: calc(50% - 50vw);margin: 0 auto; height: 205px; background-color: #ffffff; padding: 10px;border-radius:12px;">
+       <p style="text-align:center;transform:translate(0px,-6px);">提示</p>
+       <div style="width: 63vw; margin-left:calc(50% - 50vw);margin-right: calc(50% - 50vw);margin: 0 auto;font-size:12px;transform:translate(0px,-5px);">
+      软件暂时未上架,请关注官方公告内容<br> 抱歉,对您带来了不便!
+       <p onclick="copyText('724469660')" style="size-font:12px">官方一群: 724469660</p>
+       <p onclick="copyText('737977468')" style="size-font:12px;transform:translate(0px,-10px);">官方二群: 737977468</p>
+       
+       <div style="width: 63vw; margin-left:calc(50% - 50vw);margin-right: calc(50% - 50vw);margin: 0 auto;font-size:12px;transform:translate(0px,-5px);text-align:center;">
+         <button class="text1" onclick="document.getElementById('popu').style.display='none'" style="box-shadow:0 1px 2px rgba(0,0,0,0.15);border:0px solid;color:#fff;border-radius:30px;width:100%;height:30px;font-size:11px;background-color:#1E9fff;">确定</button>
+         <button class="text1" onclick="document.getElementById('popu').style.display='none'" style="border:0px solid;color:grey;border-radius:30px;width:100%;height:30px;font-size:11px;background-color:#fff;">取消</button>
+       </div>
+    </div>
+    </div>`;
+}
+</script>
+<div id="ts"></div>
+  <p class="text" style="text-align:center;transform:translate(0px,120px);font-size:45px;color:#9e2fff">hotmusic</p>
+  <p class="text" style="text-align:center;transform:translate(0px,80px);font-size:11px;color:;">一个完全公益性的</p>
+  <p class="text" style="text-align:center;transform:translate(0px,18px);font-size:65px;color:#2e9fff">音乐平台</p>
+  <div style="text-align:center;border:1px solid;border-radius:5px;width:120px;margin: 0 auto;height:35px;color:#1e9fff">
+    <p class="text1" style="transform:translate(0px,-9px);color:#000" onclick="ts()">下载软件</p>
+  </div><br><br>
+  <div style="color:#1e9fff;width: 86vw; margin-left:calc(50% - 50vw);margin-right: calc(50% - 50vw);height:310px;margin: 0 auto;border-radius:20px;border:1px solid;">
+   <p class="text1" style="color:#000;text-align:center;transform:translate(0px,-6px);">网站公告</p>
+   <div style="width: 76vw; margin-left:calc(50% - 50vw);margin-right: calc(50% - 50vw);margin: 0 auto;border:1px solid;">
+    <p class="text1" style="color:#000;text-align:center;transform:translate(0px,0px);font-size:13px">测试时间:3月15日</p>
+   </div>
+   <br>
+   <div style="width: 76vw; margin-left:calc(50% - 50vw);margin-right: calc(50% - 50vw);margin: 0 auto;border:1px solid;">
+    <p class="text1" style="color:#000;text-align:center;transform:translate(0px,0px);font-size:13px">测试时间为期五天</p>
+   </div>
+   <br>
+   <div style="width: 76vw; margin-left:calc(50% - 50vw);margin-right: calc(50% - 50vw);margin: 0 auto;border:1px solid;">
+    <p class="text1" style="color:#000;text-align:center;transform:translate(0px,0px);font-size:13px">将分为两次测试(a测b测)</p>
+   </div>
+   <br>
+   <div style="width: 76vw; margin-left:calc(50% - 50vw);margin-right: calc(50% - 50vw);margin: 0 auto;border:1px solid;">
+    <p class="text1" style="color:#000;text-align:center;transform:translate(0px,0px);font-size:13px">正式版上线后将有1000首音乐</p>
+   </div>
+  </div>
